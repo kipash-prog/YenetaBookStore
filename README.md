@@ -1,6 +1,6 @@
-# Library Management System API
+# የኔታ Book Store API
 
-This is a Django-based API for managing a library system. It includes features for managing books, users, and transactions, as well as tracking overdue books and sending email notifications.
+This is a Django-based API for managing የኔታ book store system. It includes features for managing books, users, and transactions, as well as tracking overdue books and sending email notifications.
 
 ## Features
 
@@ -17,8 +17,8 @@ This is a Django-based API for managing a library system. It includes features f
 1. Clone the repository:
 
 ```sh
-git clone https://github.com/kipash-prog/library_management_system_api.git
-cd library_management_system_api
+git clone https://github.com/kipash-prog/YenetaBookStore.git
+cd yenetaBookStore
 
 
 ## Create a virtual environment and activate it:
@@ -57,7 +57,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'your_email@example.com'
 EMAIL_HOST_PASSWORD = 'your_email_password'
-DEFAULT_FROM_EMAIL = 'Library Management System <noreply@example.com>'
+DEFAULT_FROM_EMAIL = 'yenetaBookStore<noreply@example.com>'
 
 
 JWT Authentication
