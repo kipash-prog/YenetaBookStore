@@ -1,0 +1,48 @@
+<!-- filepath: /C:/Users/HP/Desktop/library_management_system_api/Library/templates/books.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Books List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>ISBN</th>
+                <th>Available Copies</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in books %}
+                <tr>
+                    <td>{{ book.Title }}</td>
+                    <td>{{ book.Author }}</td>
+                    <td>{{ book.ISBN }}</td>
+                    <td>{{ book.Number_of_copies_Available }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

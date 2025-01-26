@@ -1,0 +1,5 @@
+Django==5.1.3
+djangorestframework==3.14.0
+djangorestframework-simplejwt==5.2.2
+djangorestframework-authtoken==3.14.0
+mysqlclient==2.1.1

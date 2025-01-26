@@ -1,0 +1,52 @@
+<!-- filepath: /C:/Users/HP/Desktop/library_management_system_api/Library/templates/borrowings.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Borrowings List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Borrowings List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Book</th>
+                <th>Checkout Date</th>
+                <th>Due Date</th>
+                <th>Return Date</th>
+                <th>Penalty</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for borrowing in borrowings %}
+                <tr>
+                    <td>{{ borrowing.user.username }}</td>
+                    <td>{{ borrowing.book.Title }}</td>
+                    <td>{{ borrowing.checkout_date }}</td>
+                    <td>{{ borrowing.due_date }}</td>
+                    <td>{{ borrowing.return_date|default:"Not returned" }}</td>
+                    <td>{{ borrowing.penalty|default:"No penalty" }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
